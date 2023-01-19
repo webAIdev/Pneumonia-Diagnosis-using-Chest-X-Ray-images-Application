@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home | Pneumonia Diagnosis Application</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <style>
+        /* https://css-tricks.com/style-list-markers-css/ */
+        ol {
+            list-style: none;
+            counter-reset: my-awesome-counter;
+        }
+
+        li {
+            counter-increment: my-awesome-counter;
+            margin: 0.25rem;
+        }
+
+        li::before {
+            content: counter(my-awesome-counter);
+            background: #662974;
+            width: 2rem;
+            height: 2rem;
+            border-radius: 50%;
+            display: inline-block;
+            line-height: 2rem;
+            color: white;
+            text-align: center;
+            margin-right: 0.5rem;
+        }
+
+        ol ol li::before {
+            background: #DE51FF;
+        }
+
+        ol ol ol li::before {
+            background: #EE9EFF;
+        }
+    </style>
+</head>
+<body>
+    <div class="container w-75 mx-auto p-4">
+
+        <h1 class="text-center mb-3">🩺Pneumonia Diagnosis Application🫁</h1>
+
+        {% if errors %}
+            <div class="border border-4 border-danger p-3 mb-3 rounded">
+                {% for msg in errors %}
+                    <p class="text-warning mb-2"><strong>{{ msg }}</strong></p>
+                {% endfor %}
+            </div>
+        {% endif %}
+
+        <div class="shadow p-4 mb-3">
+            <p class="fs-5">⚠️This is a project demo, <strong class="text-danger">do not use it for real world
+                    diagnosis!</strong></p>
+            <h5>Steps to use the application:</h5>
+            <ol start="1">
+                <li>Upload Chest X-Ray Image below. The image should be either in <strong>JPG or JPEG or PNG</strong> format. Do not
+                    use grayscaled images (The uploaded image must have 3 color channels for the prediction to work). Also, only one image can be uploaded for processing.
+                </li>
+                <li>Click on <code>Upload & Get Prediction</code> button.</li>
+                <li>Wait for the server to process the image and give the prediction results. (This might take a few seconds or a couple of minutes)</li>
+            </ol>
+            <p>You can use these sample images for testing (download and upload them):
+                <a target="_blank" href="https://prod-images-static.radiopaedia.org/images/220869/76052f7902246ff862f52f5d3cd9cd_jumbo.jpg">Normal Chest X-Ray</a>
+                <a target="_blank" href="https://prod-images-static.radiopaedia.org/images/25074603/4994014ef5c834e4803541aa1dc874_jumbo.jpeg">Pneumonia Chest X-Ray</a>
+            </p>
+        </div>
+
+        <div>
+            <form action="/" method="post" enctype="multipart/form-data">
+                <div class="mb-3">
+                    <label for="image_upload" class="form-label">Upload Chest X-Ray Image</label>
+                    <input class="form-control" type="file" name="image_upload" id="image_upload"
+                        accept=".jpg, .jpeg, .png">
+                    <p class="form-text">Accepted Image Formats: <strong>JPG, JPEG & PNG</strong></p>
+                </div>
+                <div>
+                    <input type="submit" value="Upload & Get Prediction" class="btn btn-success btn-lg me-4">
+                    <input type="reset" value="Reset" class="btn btn-danger btn-lg">
+                </div>
+            </form>
+        </div>
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
