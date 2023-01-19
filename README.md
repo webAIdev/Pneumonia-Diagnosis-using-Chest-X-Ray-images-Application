@@ -9,7 +9,7 @@
 - All the models were built using **TensorFlow**.
 - I then used that best ResNet152V2 model for making inferences, by building a web application using **Flask** python framework, where a user can upload a chest x-ray image and get the diagnosis results.
 
-> **⚠️NOTE:** The best ResNet152V2 saved model is very large, hence is not present in this repo. Download it from [here](https://drive.google.com/drive/folders/1fteRsc_pIHbu9K2zSAcLQgAbUqxIqcgb?usp=sharing) [Open this link and download the entire folder]. This file is required otherwise by the flask server to perform inferences.
+> **⚠️NOTE:** The best ResNet152V2 saved model is very large, hence is not present in this repo. Download it from [here](https://drive.google.com/drive/folders/1fteRsc_pIHbu9K2zSAcLQgAbUqxIqcgb?usp=sharing) [Open this link and download the entire folder. You will download a ZIP file. Unzip it and inside it, you will find a folder called `resnet152v2_feature_extraction_final_best_model`. Place this folder in the root of your project. Note that the filename should be as it is]. This file is required otherwise by the flask server to perform inferences.
 
 ## Description of files in the repo
 
