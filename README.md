@@ -58,5 +58,5 @@ requirements.txt
 ![Pneumonia Diagnosis page](./app_screenshots/diagnosis_pneumonia.png)
 
 #### Error message for grayscale image:
-(Some image which you download from the internet, or kaggle dataset are grayscale images and they do not contain 3 color channels. This model specifically required 3 color channels for inference.)
+(Some images which you download from the internet, or kaggle dataset are grayscale images and they do not contain 3 color channels. This model specifically required 3 color channels for inference.)
 ![Error on uploading grayscale image](./app_screenshots/error_grayscale_image_upload.png)
