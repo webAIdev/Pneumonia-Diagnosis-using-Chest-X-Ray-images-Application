@@ -1,0 +1,4 @@
+test_images
+chest_xray_dataset
+__pycache__
+resnet152v2_feature_extraction_final_best_model
