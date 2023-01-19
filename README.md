@@ -7,6 +7,7 @@
   - **ResNet152V2**
 - Out of the 5 model that I built, **ResNet152V2** model with feature extraction and a custom classifier gave the best accuracy of **89.7%**. (For the metrics of all models, please refer to `Summary.xlsx`)
 - All the models were built using **TensorFlow**.
+- I used **Google Colab** (with its free GPU) for the entire ML workflow. I downloaded this notebook as `Pneumonia_Diagnosis_From_Chest_X_Rays_Final.ipynb`.
 - I then used that best ResNet152V2 model for making inferences, by building a web application using **Flask** python framework, where a user can upload a chest x-ray image and get the diagnosis results.
 
 > **⚠️NOTE:** The best ResNet152V2 saved model is very large, hence is not present in this repo. Download it from [here](https://drive.google.com/drive/folders/1fteRsc_pIHbu9K2zSAcLQgAbUqxIqcgb?usp=sharing) [Open this link and download the entire folder. You will download a ZIP file. Unzip it and inside it, you will find a folder called `resnet152v2_feature_extraction_final_best_model`. Place this folder in the root of your project. Note that the filename should be as it is]. This file is required otherwise by the flask server to perform inferences.
