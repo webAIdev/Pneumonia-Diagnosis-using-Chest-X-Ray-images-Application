@@ -7,7 +7,7 @@
   - **ResNet152V2**
 - Out of the 5 model that I built, **ResNet152V2** model with feature extraction and a custom classifier gave the best accuracy of **89.7%**. (For the metrics of all models, please refer to `Summary.xlsx`)
 - All the models were built using **TensorFlow**.
-- I then used that best ResNet152V2 model to build a web application using **Flask** python framework, where a user can upload a chest x-ray image and get the diagnosis results.
+- I then used that best ResNet152V2 model for making inferences, by building a web application using **Flask** python framework, where a user can upload a chest x-ray image and get the diagnosis results.
 
 > **⚠️NOTE:** The best ResNet152V2 saved model is very large, hence is not present in this repo. Download it from [here](https://drive.google.com/drive/folders/1fteRsc_pIHbu9K2zSAcLQgAbUqxIqcgb?usp=sharing). This file is required otherwise by the flask server to perform inferences.
 
