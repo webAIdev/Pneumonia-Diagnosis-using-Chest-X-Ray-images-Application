@@ -45,18 +45,18 @@ requirements.txt
 
 ## Screenshots
 
-##### Home Page:
+#### Home Page:
 ![Home Page](./app_screenshots/home_page.png)
 
-##### Upload Normal Chest X-Ray image (before prediction):
+#### Upload Normal Chest X-Ray image (before prediction):
 ![Home Page - Upload Image](./app_screenshots/upload_normal.png)
 
-##### Diagnosis Results for Normal Chest X-Ray:
+#### Diagnosis Results for Normal Chest X-Ray:
 ![Normal Diagnosis page](./app_screenshots/diagnosis_normal.png)
 
-##### Diagnosis Results for Pneumonia Chest X-Ray:
+#### Diagnosis Results for Pneumonia Chest X-Ray:
 ![Pneumonia Diagnosis page](./app_screenshots/diagnosis_pneumonia.png)
 
-##### Error message for grayscale image:
+#### Error message for grayscale image:
 (Some image which you download from the internet, or kaggle dataset are grayscale images and they do not contain 3 color channels. This model specifically required 3 color channels for inference.)
 ![Error on uploading grayscale image](./app_screenshots/error_grayscale_image_upload.png)
