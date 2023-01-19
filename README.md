@@ -42,3 +42,21 @@ requirements.txt
 - Within this directory, run the following command to start the server: **`flask --app app run`**
 - Navigate to **`localhost:5000`** to access the web application.
 - You can use the following images for testing: [Normal Chest X-Ray](https://prod-images-static.radiopaedia.org/images/220869/76052f7902246ff862f52f5d3cd9cd_jumbo.jpg) [Pneumonia Chest X-Ray](https://prod-images-static.radiopaedia.org/images/25074603/4994014ef5c834e4803541aa1dc874_jumbo.jpeg)
+
+## Screenshots
+
+##### Home Page:
+![Home Page](./app_screenshots/home_page.png)
+
+##### Upload Normal Chest X-Ray image (before prediction):
+![Home Page - Upload Image](./app_screenshots/upload_normal.png)
+
+##### Diagnosis Results for Normal Chest X-Ray:
+![Normal Diagnosis page](./app_screenshots/diagnosis_normal.png)
+
+##### Diagnosis Results for Pneumonia Chest X-Ray:
+![Pneumonia Diagnosis page](./app_screenshots/diagnosis_pneumonia.png)
+
+##### Error message for grayscale image:
+(Some image which you download from the internet, or kaggle dataset are grayscale images and they do not contain 3 color channels. This model specifically required 3 color channels for inference.)
+![Error on uploading grayscale image](./app_screenshots/error_grayscale_image_upload.png)
